@@ -5,17 +5,17 @@ A Simple Android Library for Kenyan Counties
 Add it in your root build.gradle at the end of repositories:
 ```Kotlin
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
 ```
 
 
 ### Step 2. Add the dependency
 ```Kotlin
 dependencies {
-	        implementation 'com.github.JoelKanyi:KenyanCounties:Tag'
-	}
+    implementation 'com.github.JoelKanyi:KenyanCounties:Tag'
+}
 ```
