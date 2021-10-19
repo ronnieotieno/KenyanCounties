@@ -12,7 +12,6 @@ allprojects {
 }
 ```
 
-
 ### Step 2. Add the dependency
 ```Kotlin
 dependencies {
@@ -21,21 +20,26 @@ dependencies {
 ```
 
 ### Usage
+#### Attaching Counties to Spinner
 ```kotlin
-//Attaching Counties to Spinner
         val arrayAdapter: ArrayAdapter<String> =
             ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Kenya.counties())
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.spinner.adapter = arrayAdapter
-
-        // Getting a County Name by it Code
+```
+  
+#### Getting a County Name by it Code  
+```kotlin
         binding.textViewCountyName.text = Kenya.getCountyName("001")
+```
 
-        // Getting a Counties Code from its Name
+#### Getting a Counties Code from its Name        
+```kotlin
         binding.textViewCountyCode.text = Kenya.getCountyCode("Nairobi")
+```
 
-
-        // Getting CountName and CountyCode and displaying them in a RecyclerView
+#### Getting CountName and CountyCode and displaying them in a RecyclerView
+```kotlin
         adapter.submitList(Kenya.countiesWithCodes())
         binding.countiesAndCodesRecyclerview.adapter = adapter
 ```
